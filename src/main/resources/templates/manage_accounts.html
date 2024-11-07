@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage User Accounts</title>
+</head>
+<body>
+    <h1>Manage User Accounts</h1>
+    <h2>Buyers</h2>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Join Date</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Loop through buyer accounts -->
+        <tr th:each="buyer : ${buyers}">
+            <td th:text="${buyer.userId}"></td>
+            <td th:text="${buyer.joinDate}"></td>
+            <td>
+                <form action="/admin/delete-account" method="post">
+                    <input type="hidden" name="userId" th:value="${buyer.userId}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Sellers</h2>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Join Date</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Loop through seller accounts -->
+        <tr th:each="seller : ${sellers}">
+            <td th:text="${seller.userId}"></td>
+            <td th:text="${seller.joinDate}"></td>
+            <td>
+                <form action="/admin/delete-account" method="post">
+                    <input type="hidden" name="userId" th:value="${seller.userId}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <a href="/admin/dashboard">Back to Dashboard</a>
+</body>
+</html>
