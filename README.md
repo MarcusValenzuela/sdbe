@@ -44,8 +44,13 @@ Run the following command to compile and package the project:
 mvn clean package
 
 4. Running the Project
-After a successful build, you can run the project using the following command:
-mvn javafx:run
+After a successful build, you can run the project using the following commands:
+mvn clean
+mvn compile
+mvn package
+mvn spring-boot:run
+
+make sure your localhost is "http://localhost:8080/"
 
 
 Troubleshooting
