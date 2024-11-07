@@ -1,6 +1,9 @@
 package com.sundevilbookexchange.services;
 
+import com.sundevilbookexchange.User;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,26 +11,23 @@ import java.util.List;
 public class UserService {
 
     // Mock method to return a list of buyers
-    public List<String> getAllBuyers() {
-        // For now, return a mock list of buyer names (or mock objects)
-        List<String> buyers = new ArrayList<>();
-        buyers.add("Buyer1");
-        buyers.add("Buyer2");
+    public List<User> getAllBuyers() {
+        List<User> buyers = new ArrayList<>();
+        buyers.add(new User(1L, LocalDate.now().minusDays(10)));
+        buyers.add(new User(2L, LocalDate.now().minusDays(20)));
         return buyers;
     }
 
     // Mock method to return a list of sellers
-    public List<String> getAllSellers() {
-        // For now, return a mock list of seller names (or mock objects)
-        List<String> sellers = new ArrayList<>();
-        sellers.add("Seller1");
-        sellers.add("Seller2");
+    public List<User> getAllSellers() {
+        List<User> sellers = new ArrayList<>();
+        sellers.add(new User(3L, LocalDate.now().minusDays(15)));
+        sellers.add(new User(4L, LocalDate.now().minusDays(25)));
         return sellers;
     }
 
     // Mock method to simulate deleting a user by ID
     public void deleteUserById(Long userId) {
-        // Mock deletion logic (print statement for now)
         System.out.println("User with ID " + userId + " deleted.");
     }
 }
