@@ -1,0 +1,22 @@
+# Ignore build output
+/target/
+*.class
+*.jar
+*.war
+
+# Ignore IDE files
+/.idea/
+/*.iml
+/.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore target directory
+target/
+
+# Ignore Maven build status files
+*.lst
+*.xml
+*.txt
