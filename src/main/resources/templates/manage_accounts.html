@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manage User Accounts</title>
-</head>
-<body>
-    <h1>Manage User Accounts</h1>
-    <h2>Buyers</h2>
-    <table>
+    <link rel="stylesheet" href="/css/global.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="/css/manage-accounts-style.css"> <!-- Page-Specific Styles -->
+  <body>
+    <div th:replace="partials/header.html"></div>
+    <div class="container">
+      <h1>Manage User Accounts</h1>
+      <div class="summary">
+        <div class="summary-item">
+          <h2>Total Buyer Accounts: <span id="totalBuyers">3</span></h2>
+        </div>
+        <div class="summary-item">
+          <h2>Total Seller Accounts: <span id="totalSellers">3</span></h2>
+        </div>
+        <div class="summary-item">
+          <h2>New Buyer Accounts: <span id="totalBuyers">3</span></h2>
+        </div>
+        <div class="summary-item">
+          <h2>New Seller Accounts: <span id="totalSellers">3</span></h2>
+        </div>
+      </div>
+      <h3>Buyers</h3>
+      <table class="user-table">
         <tr>
-            <th>User ID</th>
-            <th>Join Date</th>
-            <th>Actions</th>
+          <th>User ID</th>
+          <th>Join Date</th>
+          <th>Actions</th>
         </tr>
-        <!-- Loop through buyer accounts -->
-        <tr th:each="buyer : ${buyers}">
-            <td th:text="${buyer.userId}"></td>
-            <td th:text="${buyer.joinDate}"></td>
-            <td>
-                <form action="/admin/delete-account" method="post">
-                    <input type="hidden" name="userId" th:value="${buyer.userId}">
-                    <button type="submit">Delete</button>
-                </form>
-            </td>
+        <tr>
+          <td>1</td>
+          <td>2024-10-29</td>
+          <td><button class="delete-btn">Delete</button></td>
         </tr>
-    </table>
+        <tr>
+          <td>2</td>
+          <td>2024-10-19</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      </table>
 
-    <h2>Sellers</h2>
-    <table>
+      <h3>Sellers</h3>
+      <table class="user-table">
         <tr>
-            <th>User ID</th>
-            <th>Join Date</th>
-            <th>Actions</th>
+          <th>User ID</th>
+          <th>Join Date</th>
+          <th>Actions</th>
         </tr>
-        <!-- Loop through seller accounts -->
-        <tr th:each="seller : ${sellers}">
-            <td th:text="${seller.userId}"></td>
-            <td th:text="${seller.joinDate}"></td>
-            <td>
-                <form action="/admin/delete-account" method="post">
-                    <input type="hidden" name="userId" th:value="${seller.userId}">
-                    <button type="submit">Delete</button>
-                </form>
-            </td>
+        <tr>
+          <td>3</td>
+          <td>2024-10-24</td>
+          <td><button class="delete-btn">Delete</button></td>
         </tr>
-    </table>
-    <a href="/admin/dashboard">Back to Dashboard</a>
-</body>
+        <tr>
+          <td>4</td>
+          <td>2024-10-14</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      </table>
+
+      <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,22 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    height: 3.3rem;
+    background-color: #dcad25;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    margin-right: auto; /* Push logo as far left as possible */
+}
+
+.logo img {
+    max-height: 50px; /* Set maximum height for the image */
+}
