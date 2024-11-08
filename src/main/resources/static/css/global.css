@@ -1,6 +1,7 @@
 /* Global Styles */
-body {
-    margin: 0;
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
     font-family: Arial, sans-serif;
 }
 
@@ -19,4 +20,43 @@ body {
 
 .logo img {
     max-height: 50px; /* Set maximum height for the image */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 15rem; /* Fixed width for the sidebar */
+    background-color: #f4f4f4; /* Sidebar background color */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sidebar-container {
+    margin-top: 2rem;
+
+    > h2 {
+        color: #444444;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+}
+
+.sidebar a {
+    color: #777777; /* Light grayish color */
+    text-decoration: none;
+
+    &:hover {
+        color: #333333; /* Dark grayish color */
+    }
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.sidebar li {
+    margin-bottom: 1.5rem; /* Space between links */
 }
