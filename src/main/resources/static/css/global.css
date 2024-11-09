@@ -1,0 +1,82 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    height: 3.3rem;
+    background-color: #dcad25;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    margin-right: auto; /* Push logo as far left as possible */
+}
+
+.logo img {
+    max-height: 50px; /* Set maximum height for the image */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 15rem; /* Fixed width for the sidebar */
+    background-color: #f4f4f4; /* Sidebar background color */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100vh; /* Make the sidebar full height */
+    justify-content: space-between; /* Space items evenly and push logout to the bottom */
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes the container take up available space */
+    margin-top: 2rem;
+}
+
+.sidebar-container h2 {
+    color: #444444;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.sidebar a {
+    color: #777777; /* Light grayish color */
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #333333; /* Dark grayish color */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.sidebar li {
+    margin-bottom: 1.5rem; /* Space between links */
+}
+
+.logout-btn {
+    display: block; 
+    margin-top: auto; /* Pushes the button to the bottom */
+    background-color: #cfcfcf;
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 5px; 
+    text-decoration: none; 
+}
+
+.logout-btn:hover {
+    background-color: #ffffff; 
+}

@@ -1,4 +1,4 @@
-package com.sundevilbookexchange.controllers;
+package com.sundevilbookexchange.components;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
